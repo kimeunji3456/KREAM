@@ -1,0 +1,496 @@
+#container {
+    margin-top: 100px;
+}
+
+.main-swiper {
+    position: relative;
+    max-height: 480px;
+    overflow: hidden;
+
+    .main-slide {
+        .swiper-wrapper {
+            width: 2535px;
+            opacity: 1;
+        }
+
+        .swiper-slide {
+            outline: none;
+            width: 1689px;
+
+            @include mobile {
+                width: 483px;
+            }
+
+            a {
+                display: block;
+                width: 100%;
+
+                .swiper-inner {
+                    height: 480px;
+                    margin: 0 auto;
+                }
+
+                img {
+                    display: inline-block;
+                    width: 100%;
+                    height: 100%;
+                    margin: 0 auto;
+                }
+            }
+
+            a.slide1 {
+                background-color: rgb(240, 240, 240);
+            }
+
+            a.slide2 {
+                background-color: rgb(0, 121, 140);
+            }
+
+            a.slide3 {
+                background-color: rgb(251, 236, 231);
+            }
+
+            a.slide4 {
+                background-color: rgb(232, 226, 218);
+            }
+
+            a.slide5 {
+                background-color: rgb(146, 64, 64);
+            }
+
+            a.slide6 {
+                background-color: rgb(199, 209, 207);
+            }
+
+            a.slide7 {
+                background-color: rgb(43, 43, 43);
+            }
+        }
+
+        .swiper-pagination {
+            position: absolute;
+            bottom: 10px;
+            --swiper-theme-color: #000;
+
+            @include mobile {
+                bottom: 37px;
+
+                .swiper-pagination-bullet {
+                    border-radius: 0;
+                    --swiper-theme-color: #fff;
+                    width: 20px;
+                    height: 2px;
+                    margin: 0;
+                }
+            }
+        }
+
+        .btn {
+            display: block;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 80px;
+            height: 80px;
+            z-index: 1;
+
+            @include mobile {
+                display: none;
+            }
+        }
+
+        .btn.prev {
+            left: 0;
+            background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCA4MCA4MCI+PHBhdGggc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjEuNSIgZD0iTTUwIDYwTDMwIDQwbDIwLTIwIi8+PC9zdmc+) no-repeat;
+        }
+
+        .btn.next {
+            right: 0;
+            background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCA4MCA4MCI+PHBhdGggc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjEuNSIgZD0iTTMwIDIwbDIwIDIwLTIwIDIwIi8+PC9zdmc+) no-repeat;
+        }
+    }
+}
+
+
+
+// 메뉴별 모음
+.another-menu {
+    @include mobile {
+        margin-top: 20px;
+    }
+
+    .grid-list {
+        margin-top: 0;
+
+        .grid-item {
+            height: 128px;
+
+            @include mobile {
+                height: 105px;
+            }
+
+            a {
+                img {
+                    border: 1px solid rgba(34, 34, 34, .05);
+                    color: rgba(34, 34, 34, .05);
+                    border-radius: 10px;
+
+                    @include mobile {
+                        border-radius: 50%;
+                        background-color: #222222;
+                        border: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// 발매 상품
+.sc-release {
+    margin-top: 50px;
+
+    @include mobile {
+        padding-top: 30px;
+        margin-bottom: 28px;
+        border-top: 1px solid #ebebeb;
+    }
+}
+
+
+// 추천 브랜드
+.recom-brand {
+    
+    .grid-list {
+
+        @include mobile {
+            margin-top: 16px;
+        }
+
+        .grid-item {
+            height: 125px;
+
+            @include mobile {
+                height: 105px;
+            }
+
+            a {
+                img {
+                    border-radius: 10px;
+
+                    @include mobile {
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// outdoor-banner
+.outdoor-banner {
+    background-color: #4D5A48;
+}
+
+
+// sc-popular
+.sc-popular {
+    margin-top: 30px;
+
+    @include mobile {
+        margin-top: 20px;
+        margin-bottom: 28px;
+    }
+}
+
+
+// sc-style
+.sc-style {
+    margin-top: 50px;
+
+    @include mobile {
+        margin-top: 28px;
+        margin-bottom: 28px;
+    }
+}
+
+
+// ugg-banner
+.ugg-banner {
+    background-color: #B7BB9D;
+}
+
+
+// sc-new
+.sc-new {
+    margin-top: 30px;
+
+    @include mobile {
+        margin-top: 20px;
+        margin-bottom: 28px;
+    }
+}
+
+
+// sc-sneakers
+.sc-sneakers {
+    .sneakers-banner {
+        background-color: #E0DDC1;
+    }
+
+    .sneakers-group {
+        margin-top: 30px;
+
+        @include mobile {
+            margin-top: 20px;
+        }
+    }
+}
+
+
+// sc-prada
+.sc-prada {
+    .prada-banner {
+        background-color: #D5CFD7;
+    }
+
+    .prada-group {
+        margin-top: 30px;
+
+        @include mobile {
+            margin-top: 20px;
+        }
+    }
+}
+
+
+// sc-scarf
+.sc-scarf {
+    .scarf-banner {
+        background-color: #58554B;
+    }
+
+    .scarf-group {
+        margin-top: 30px;
+
+        @include mobile {
+            margin-top: 20px;
+        }
+    }
+}
+
+
+// sc-rising
+.sc-rising {
+    .rising-banner {
+        background-color: #C2A9A6;
+    }
+
+    .rising-group {
+        margin-top: 30px;
+
+        @include mobile {
+            margin-top: 20px;
+        }
+    }
+}
+
+
+// sc-user
+.sc-user {
+    margin-top: 50px;
+
+    @include mobile {
+        margin-top: 28px;
+        margin-bottom: 28px;
+    }
+}
+
+
+// luxury-banner
+.luxury-banner {
+    background-color: #D7D4CB;
+}
+
+
+// sc-lowest
+.sc-lowest {
+    margin-top: 30px;
+
+    @include mobile {
+        margin-top: 20px;
+    }
+}
+
+
+// sc-highest
+.sc-highest {
+    margin-top: 50px;
+
+    @include mobile {
+        margin-top: 30px;
+    }
+}
+
+
+// febric-banner
+.febric-banner {
+    background-color: rgb(214, 203, 195);
+}
+
+
+// sc-coming
+.sc-coming {
+    margin-top: 30px;
+
+    @include mobile {
+        margin-top: 20px;
+    }
+}
+
+
+// sc-beanies
+.sc-beanies {
+    .beanies-banner {
+        background-color: rgb(129, 126, 159);
+    }
+
+    .beanies-group {
+        margin-top: 30px;
+
+        @include mobile {
+            margin-top: 20px;
+        }
+    }
+}
+
+
+// sc-shoe
+.sc-shoe {
+    .shoe-banner {
+        background-color: rgb(145, 167, 180);
+    }
+
+    .shoe-group {
+        margin-top: 30px;
+
+        @include mobile {
+            margin-top: 20px;
+        }
+    }
+}
+
+
+// 고프고어
+.sc-gorpcore {
+    padding-bottom: 160px;
+
+    .gorpcore-banner {
+        background-color: rgb(157, 150, 158);
+    }
+
+    .gorpcore-group {
+        margin-top: 30px;
+
+        @include mobile {
+            margin-top: 20px;
+        }
+    }
+}
+
+
+// sc-banner
+.sc-banner {
+    display: flex;
+
+    @include mobile {
+        display: block;
+    }
+
+    // 공통
+    .banner {
+        @include mobile {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        
+        a {
+            display: block;
+            position: relative;
+            padding: 36px 32px 0;
+            width: 100%;
+            height: 200px;
+            background-position: 100% 0;
+            background-repeat: no-repeat;
+            background-size: 350px 200px;
+
+            @include mobile {
+                padding: 29px 21px 0;
+                background-position: 200px;
+            }
+
+            .content {
+                max-width: 300px;
+                color: #fff;
+
+                .title {
+                    font-size: 12px;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                }
+
+                .des {
+                    padding-top: 12px;
+                    text-shadow: -1px 0 #565656, 0 1px #565656, 1px 0 #565656, 0 -1px #565656;
+                    font-size: 16px;
+                    line-height: 20px;
+                    letter-spacing: -.16px;
+
+                    @include mobile {
+                        padding-top: 37px;
+                        line-height: 29px;
+                    }
+                }
+
+                .banner-btn {
+                    display: inline-block;
+                    margin-top: 16px;
+                    padding: 0 7px;
+                    font-size: 12px;
+                    letter-spacing: -.06px;
+                    height: 29px;
+                    line-height: 27px;
+                    border-radius: 6px;
+                    border: 1px solid hsla(0, 0%, 100%, .8);
+                    color: #fff;
+
+                    @include mobile {
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+
+    // sc-service
+    .sc-service {
+        background-color: #565656;
+        flex: 1;
+
+        a {
+            background-image: url(https://kream.co.kr/_nuxt/img/home_banner_bottom1.79549cb.png);
+        }
+    }
+
+    // sc-download
+    .sc-download {
+        background-color: #3b3a3c;
+        flex: 1;
+
+        a {
+            background-image: url(https://kream.co.kr/_nuxt/img/home_banner_bottom2.0077547.png);
+        }
+    }
+}

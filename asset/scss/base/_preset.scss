@@ -1,0 +1,57 @@
+.blind {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+}
+
+.inner {
+    max-width: 1280px;
+    margin: 0 auto;
+
+    @include mobile {
+        max-width: none;
+    }
+}
+
+.wrapper {
+    min-width: 320px;
+    margin: 0 auto;
+}
+
+body {
+    font-family: 'roboto';
+    color: #222;
+}
+
+body.o-hidden {
+    overflow: hidden;
+}
+
+// 첫 번째 방법
+// body.o-hidden .header::after {
+//     content: '';
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//     background: rgba(0, 0, 0, 0.7);
+// }
+
+// 두 번째 방법
+body.o-hidden .dimmed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+img {
+    object-fit: cover;
+    vertical-align: top;
+}

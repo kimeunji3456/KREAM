@@ -1,0 +1,145 @@
+// 스타일 및 인기 유저
+.pick {
+    .title {
+        padding: 0 40px 16px;
+        font-size: 24px;
+        line-height: 28px;
+        letter-spacing: -.12px;
+        font-weight: 700;
+        color: #000;
+
+        @include mobile {
+            padding: 0 16px 16px;
+            font-size: 20px;
+            line-height: 24px;
+            letter-spacing: -.1px;
+            color: #222;
+        }
+    }
+
+    .swiper-wrap {
+        position: relative;
+
+        &:hover a.btn {
+            display: block;
+
+            @include mobile {
+                display: none;
+            }
+        }
+
+        .swiper-wrapper {
+            display: flex;
+
+            @include mobile {
+                padding: 0 16px;
+            }
+
+            .swiper-slide {
+                overflow: hidden;
+                width: 203px;
+
+                @include mobile {
+                    width: 132px;
+                }
+
+                a {
+                    display: block;
+                    overflow: hidden;
+                    position: relative;
+                    border-radius: 10px;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        background-image: linear-gradient(0deg, rgba(0, 0, 0, .5), transparent 30%);
+                        border-radius: inherit;
+                        border: 1px solid #ebebeb;
+                    }
+
+                    .img-box {
+                        height: 246px;
+                        max-height: 100%;
+
+                        @include mobile {
+                            height: 175px;
+                        }
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+
+                    .insta-profile {
+                        position: absolute;
+                        top: 8px;
+                        left: 8px;
+                        width: 36px;
+                        height: 36px;
+                        border-radius: 100%;
+                        z-index: 10;
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            border: 2px solid #fff;
+                            border-radius: 50%;
+                        }
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 50%;
+                        }
+                    }
+
+                    .insta-account {
+                        position: absolute;
+                        left: 8px;
+                        right: 8px;
+                        bottom: 12px;
+                        overflow: hidden;
+                        width: 100%;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        font-size: 13px;
+                        line-height: 16px;
+                        color: #fff;
+                        z-index: 10;
+                    }
+                }
+            }
+        }
+
+        .btn {
+            display: none;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 80px;
+            height: 100px;
+            z-index: 1;
+        }
+
+        .btn.prev {
+            left: -30px;
+            background: url(https://kream.co.kr/_nuxt/img/arr-left-circle-big.7c37625.svg) no-repeat;
+            z-index: 1;
+        }
+
+        .btn.next {
+            right: -30px;
+            background: url(https://kream.co.kr/_nuxt/img/arr-right-circle-big.9802494.svg) no-repeat;
+            z-index: 1;
+        }
+    }
+}

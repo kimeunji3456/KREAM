@@ -1,0 +1,18 @@
+@import './utils/var';
+@import './utils/mixin';
+
+@import './base/typo';
+@import './base/reset';
+@import './base/preset';
+
+@import './layout/header';
+@import './layout/footer';
+
+@import './component/grid';
+@import './component/product';
+@import './component/pick';
+@import './component/banner';
+@import './component/title';
+@import './component/btnmore';
+
+@import './page/main.scss';

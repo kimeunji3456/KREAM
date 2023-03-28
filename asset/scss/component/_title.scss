@@ -1,0 +1,39 @@
+// 타이틀
+.section {
+    .title-area {
+        padding: 0 40px;
+
+        @include mobile {
+            padding: 0 16px;
+        }
+
+        .title {
+            font-size: 20px;
+            line-height: 24px;
+            letter-spacing: -.1px;
+            font-weight: 700;
+            color: #000;
+
+            @include mobile {
+                font-size: 18px;
+                line-height: 22px;
+                letter-spacing: -.09px;
+            }
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 18px;
+            letter-spacing: -.21px;
+            color: rgba(34, 34, 34, .5);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            max-width: 262px;
+
+            @include mobile {
+                max-width: 230px;
+            }
+        }
+    }
+}
